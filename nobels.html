@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEST nobels</title>
+<link rel="stylesheet" href="nobels_style.css">
+</head>
+
+<body>
+    <main>
+        <div class="upper">
+            <div class="title_descr">
+                <!-- webpage main title -->
+                <div class="title">
+                    <h1>Nobel hall of fame</h1>
+                </div>
+                <!-- brief description about the page functionality -->
+                <div class="description">
+                    <p>You can navigate through the whole history of Nobel prizes since the first award until current year.<br><br>Just make your own selection using the wealth of options below. Don't forget to press the button!</p>
+                </div>
+            </div>
+            <!-- introduction with image and quote -->
+            <div class="introduction">
+                <img alt="Alfred Nobel" src="images/nobelprize1.jpg">
+                <blockquote cite="https://www.brainyquote.com/quotes/alfred_nobel_142899">
+                    <p>"If I have a thousand ideas and only one turns out to be good, I am satisfied."</p>
+                    <footer>- <a href="https://en.wikipedia.org/wiki/Alfred_Nobel">Alfred Nobel (1833-1896)</a> -</footer>
+                </blockquote>
+            </div>
+            
+        </div>
+        <!-- input section with filters -->
+        <div class="inputform">
+            <!-- filter through a range of years set by the user -->
+            <section class="years_selection inputform_child">
+                <h4>Select a range of years</h4>
+                start <input style="font-family: Roboto Slab" id="startyear" type="number" placeholder="1901" value="1901" min="1901" max="2018">
+                end <input style="font-family: Roboto Slab" id="endyear" type="number" placeholder="2018" value="2018" min="1901" max="2018"><br>
+            </section>
+            <!-- filter through Nobel prize categories -->
+            <section class="category_selection inputform_child">
+                <h4>Select a prize category</h4>
+                <select id="subject" style="font-family: Roboto Slab">
+                    <option value="" selected="selected">All</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="medicine">Medicine</option>
+                    <option value="economics">Economics</option>
+                    <option value="literature">Literature</option>
+                    <option value="peace">Peace</option>
+                </select>
+            </section>
+            <!-- filter through Nobel prize winners' countries of birth using actual names -->
+            <section class="country_selection inputform_child">
+                <h4>Select a country of birth</h4>
+                <select id="country" style="font-family: Roboto Slab">
+                    <option value="all" selected="selected">All</option>
+                </select>
+            </section>
+            <!-- submit button toggling sex filter -->
+            <div class="submit_button">
+                <input id="submitButton" type="submit">
+            </div>
+            <p id="yerror"></p>
+        </div>
+
+        <!-- show results in a table with radio buttons on top -->
+        <section class="result_section">
+            <form id="sexform" action="">
+                <input type="radio" id="radio_both" name="gender" value="both" checked="checked"> both
+                <input type="radio" id="radio_male" name="gender" value="male" > man
+                <input type="radio" id="radio_female" name="gender" value="female"> woman
+            </form>
+            <div class="cont_table">
+                <table id="outcome"></table>
+            </div>
+            <!-- error message when no results match user filters -->
+            <p id="emptyresult"></p>
+        </section>
+        <!-- modal to be shown when user clicks 'more info' button beside each Nobel winner's name
+            code retrieved at https://www.w3schools.com/howto/howto_css_modals.asp -->
+        <div id="myModal" class="modal">
+        <!-- modal content, i.e. further information about the winners -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                    <div id="moreinfo"></div>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="nobels.js"></script>
+</body>

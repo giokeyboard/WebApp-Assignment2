@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   font-family: "Roboto Slab", sans-serif;
+}
+
+h4 {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.upper {
+    display: flex;
+    background-color: #3c3c3c;
+    color:white;
+}
+
+.title_descr {
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-right: 30px;
+}
+
+.title {
+    font-family: "Raleway", serif;
+    font-size: 1.5em; 
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.description {
+    font-weight: lighter;
+}
+
+.introduction {
+    width:80%;
+    clear:both;
+    text-align: right;
+    float:right;
+}
+
+.introduction blockquote {
+    font-size: 0.8em;
+}
+
+.introduction a {
+    color:white;
+}
+
+.introduction p {
+    font-style: italic;
+}
+
+img {
+    margin-top: 60px;
+    float: right;
+    width: 100%;
+    height: auto;
+}
+
+.inputform {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 3px solid #3c3c3c;
+    border-top: 3px solid #3c3c3c;
+    margin: 0;
+    background-color: rgba(244, 228, 34, 0.29);
+}
+
+.inputform_child {
+    display: inline-block;
+    width: 32%;
+}
+
+#yerror {
+    color:#de0000;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 0;
+    display:inline-block;
+    width:32%;
+}
+
+.submit_button {
+    position:relative;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    width:100px;
+    margin-left:-50px;
+    left:50%;
+}
+
+#submitButton {
+    color: #3c3c3c;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    border: 2.5px solid #3c3c3c;
+    border-radius: 10px;
+}
+
+#submitButton:hover {
+    background-color: #3c3c3c;
+    color: white;
+}
+
+.cont_table {
+    overflow-x:auto;
+    margin:auto;
+    padding:10px;
+}
+
+#sexform {
+    display:none;
+    padding-top: 10px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+table {
+    margin:auto;
+    border: 1px solid #3c3c3c;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th {
+    color: white;
+    background-color: #3c3c3c;
+    height: 30px;
+}
+
+th, td {
+    text-align: left;
+    padding: 5px;
+    border: 1px solid #3c3c3c;
+}
+
+tr:hover {background-color: rgba(255, 243, 93, 0.62);}
+
+.myBtn {
+    font-weight: 600;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    float: right;
+    border: 1px solid #3c3c3c;
+    border-radius: 10px;
+}
+
+.myBtn:hover {
+    background-color: #3c3c3c;
+    color: white;
+}
+
+#emptyresult {
+    text-align:center;
+    font-weight: 500;
+    color:#de0000;
+}
+
+
+/* MODAL PART - code retrieved at https://www.w3schools.com/howto/howto_css_modals.asp */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.69); /* Black w/ opacity */
+    max-height: 100%;
+    max-height: 100%;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid #3c3c3c;
+    width: 80%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: #3c3c3c;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #de0000;
+    text-decoration: none;
+    cursor: pointer;
+}
